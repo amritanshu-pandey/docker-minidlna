@@ -13,7 +13,7 @@ for each_env in os.environ:
             key = each_env[4:]
 
         with open(CONFIG_FILE, 'a') as cfg:
-            cfg.write(f'{key}={os.environ[each_env]}')
+            cfg.write(f'{key}={os.environ[each_env]}\n')
 
 
 subprocess.call('/usr/sbin/minidlnad -d'.split())
