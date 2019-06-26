@@ -1,0 +1,17 @@
+version: '2'
+services:
+  server:
+    image: amritanshu16/minidlna-server:latest
+    read_only: true
+    network_mode: "host"
+    ports:
+      - "8200:8200"
+    volumes:
+      - "/sharedfolders/Entertainment/Shows/:/media/shows"
+      - "/sharedfolders/Entertainment/Movies/:/media/movies"
+    environment:
+      - cfg_media_dir_shows=V,/media/shows
+      - cfg_media_dir_movies=V,/media/movies
+      - cfg_friendly_name=xpsnas-docker
+    restart: always
+

@@ -1,7 +1,10 @@
 import os
 import subprocess
+import shutil
 
 CONFIG_FILE = '/etc/minidlna'
+
+shutil.unlink(CONFIG_FILE)
 
 for each_env in os.environ:
     if each_env.startswith('cfg_'):
