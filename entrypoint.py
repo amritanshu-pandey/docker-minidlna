@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-CONFIG_FILE = '/etc/minidlna'
+CONFIG_FILE = '/etc/minidlna.conf'
 
 os.unlink(CONFIG_FILE)
 
