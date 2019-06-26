@@ -10,5 +10,5 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: docker build amritanshu16/minidlna-server:latest .
+- script: docker build -t amritanshu16/minidlna-server:latest .
   displayName: Docker build
